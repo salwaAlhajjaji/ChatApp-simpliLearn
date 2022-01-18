@@ -1,0 +1,147 @@
+body, html {
+    background-color:azure;
+    color: #413e3e;
+}
+.bg-blue{
+    background-color: #0a4275;
+    color: #fff;
+}
+.bg-dblue{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-purple{
+    background-color: rgb(90, 62, 100);
+    color: #fff;
+    font-size: 18px;  
+}
+.btn-purple:hover{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.rounded-div{
+    display: block;
+    background: #fff;
+    box-shadow: 0 4px 48px 0 rgba(0, 0, 0, 0.10);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+.rounded-div:hover .icon {
+    background-color: #0a4275;
+  }  
+  .rounded-div .icon {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 30px;
+    background: #8261ee;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+  
+  
+  .rounded-div .rounded-title {
+    font-weight: 500;
+    font-size: 19px;
+    color: #413e3e;
+    letter-spacing: 0.7px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .rounded-div p {
+    font-weight: 400;
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .rounded-div a {
+    float: right;
+    position: relative;
+    z-index: 2;
+  }
+
+
+  /* bubles design => https://codingislove.com/css-speech-bubbles/ */
+  .box {
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background: #78cec9;;
+    color: #fff;
+    padding: 20px;
+    /* font-weight: 900; */
+    position: relative;
+    clear: both;
+  }
+  
+  
+  /* speech bubble 13 */
+  .sb-right:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid #78cec9;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #78cec9;
+    border-bottom: 15px solid transparent;
+    right: -16px;
+    top: 0px;
+  }
+  
+  
+  /* speech bubble 14 */
+  
+  .sb-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid rgb(181, 214, 214);
+    border-top: 15px solid rgb(181, 214, 214);
+    border-bottom: 15px solid transparent;
+    left: -16px;
+    top: 0px;
+  }
+  .float-r {
+    float: right;
+    text-align: right;
+    margin-right: 20px;
+    color: #fff;
+  }
+  .float-l {
+    float: left;
+    text-align: left;
+    background-color:rgb(181, 214, 214);
+    color: #fff;
+    margin-left: 20px;
+  }
+
+  
