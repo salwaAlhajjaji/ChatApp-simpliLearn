@@ -86,5 +86,6 @@ let getChatById = (cId, res) => {
     }
   });
 };
-// run thhe application using http refrence
+// run thhe application using http reference
+// http://localhost:9090/
 http.listen(9090, () => console.log("Server is runing on port number 9090"));
