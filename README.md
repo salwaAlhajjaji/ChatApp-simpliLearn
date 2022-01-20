@@ -20,7 +20,7 @@ Visual Studio Code, Node JS, Express JS, Socket.io, MongoDB, GitHub
 
 
 * (Server Side)
-![Screen Shot 2022-01-20 at 11 25 11 AM](https://user-images.githubusercontent.com/24601296/150302541-3ff618e6-b52e-4cb4-bea4-401324b0fc2f.png)
+![Screen Shot 2022-01-20 at 11 25 11 AM](https://user-images.githubusercontent.com/24601296/150302869-311dda1b-69c7-4d62-853f-56e7aa309074.png)
 
 
 ## Steps to run App
