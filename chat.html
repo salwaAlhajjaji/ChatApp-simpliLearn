@@ -16,28 +16,21 @@
     <script type="text/JavaScript">
          let socket = io() //connection
         let name = localStorage.getItem('name')
-        // array to save chat temporary
-let chatArray = [];
-let saveChat = ()=>{
-    chatArray.forEach((elemnt)=>{
-        console.log(elemnt.sender+" : "+elemnt.message)
-    })
-}
+
         socket.on('connect', (msg)=>{ 
-            // console.log("From Client: "+msg)
             document.getElementById("welcome").innerHTML = 'Welcome '+name+'<br>'
          })
+
          socket.on('disconnect',()=>{
             localStorage.setItem('name', '')
         console.log("Client disconnected")
         })
+
          socket.on('Server', (msg)=>{ //get data from server
-            console.log("From Server: "+msg)
             let serverDiv = document.createElement('div')
             serverDiv.className = 'box sb-left float-l'
             serverDiv.innerText = msg
             document.getElementById("output").appendChild(serverDiv);
-            chatArray.push({sender: "Server", message: msg})
             serverDiv.scrollIntoView(true);
          })
 
@@ -46,17 +39,14 @@ let saveChat = ()=>{
             clientDiv.className = 'box sb-right float-r'
             clientDiv.innerText = msg
             document.getElementById("output").appendChild(clientDiv)
-            chatArray.push({sender: "Client", message: msg})
             clientDiv.scrollIntoView(true);
          })
 
-         sendInfo = ()=>{
+        sendInfo = ()=>{
             let msg = document.getElementById("msg").value;
             socket.emit('Client' ,msg)
             document.getElementById("msg").value = ""
          }
-
-
      </script>
 </head>
 
@@ -66,7 +56,10 @@ let saveChat = ()=>{
             <div class="row">
                 <div class="row w-100">
                     <div class="col-3">
-                        <button class="btn btn-purple"  onclick="saveChat()">Download Messages</button>
+                        <!-- <button class="btn btn-purple"  onclick="saveChat()">Download Messages</button> -->
+                        <form method="post" action="/chat">
+                            <input class="btn btn-purple" type="submit" value="Download Messages">
+                        </form>
                     </div>
                 </div>
                 <div class="row mx-auto rounded-title">
@@ -78,8 +71,8 @@ let saveChat = ()=>{
                 </div>
                 <div class="row w-100 d-flex justify-content-center">
                     <div class="col-10">
-                        <input class="form-control" type="text" id="msg" onkeydown = "if (event.keyCode == 13)
-                        document.getElementById('send').click()"  /><br>
+                        <input class="form-control" type="text" id="msg" onkeydown="if (event.keyCode == 13)
+                        document.getElementById('send').click()" /><br>
                     </div>
                     <div class="col-1">
                         <button class="btn btn-purple" id="send" onclick="sendInfo()">Send</button>
